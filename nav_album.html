@@ -1,0 +1,112 @@
+<!--<nav class="navbar fixed-top" style="background-color: #252525;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Fixed top</a>
+        </div>
+      </nav>-->
+    <!--navigation-bar-->
+    <nav class="navbar navbar-expand-lg" style="background-color: #252525;">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand" ><img src="images/Logo/DearMe-Logo-White.png" width="125px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    </li>
+                        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            STAR</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">The Boyz</a></li>
+                            <li><a class="dropdown-item" href="#">BTS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Album</a></li>
+                            <li><a class="dropdown-item" href="#">Official Merch</a></li>
+                            <li><a class="dropdown-item" href="#">K-Style</a></li>
+                            <li><a class="dropdown-item" href="#">Concert Ticket</a></li>
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HELP</a>
+                    </li>
+
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </nav>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-bell"></i></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#signInRegister">Log In</button>
+                    </li>
+
+                <!--<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Log In</i></a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Sign In</a></li>
+                            <li><a class="dropdown-item" href="#">Register</a></li>
+                        </ul>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-comment-dots"></i></i></a>
+                        </li>-->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--modal-->
+    <div class="modal fade" id="signInRegister" tabindex="-1" aria-labelledby="signInRegisterLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInRegister">Account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+
+                <div class="modal-body">
+                    <form method="POST" action="Log In">
+                        <p>Email</p>
+                            <input type="text" class="input-field form-control" name="email" placeholder="example@gmail.com" required>
+                        <p>Password</p>
+                            <input type="password" class="input-field form-control"  name="password" required>
+                
+                        <input type="submit" name="submit" value="OK">
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <p>Don't have an account yet?</p>
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>

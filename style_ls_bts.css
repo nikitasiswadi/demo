@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2%;
+    /* background-color: beige; */
+  }
+  .dua{
+      margin-left: 5%;
+  }
+  .tiga{
+      margin-left: 5%;
+  }
+  .empat{
+      margin-left: 5%;
+  }

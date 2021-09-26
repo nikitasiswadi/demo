@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+    <!-- <script src="http://code.jquery.com"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+
+
+    <title>DearMe | Category Album</title>
+    <!--stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--fav-icon-->
+    <link rel="shortcut icon" href="images/Logo/fav-d-icon.png">
+    <!--using-fontAwesome-->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+    <!--function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less";
+          moreText.style.display = "inline";
+        }
+    }
+    #more {display: none;}-->
+
+    <link rel="stylesheet" href="style_album.css">
+    
+</head>
+
+<body>
+    <!--<nav class="navbar fixed-top" style="background-color: #252525;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Fixed top</a>
+        </div>
+      </nav>-->
+    <!--navigation-bar-->
+    <nav class="navbar navbar-expand-lg" style="background-color: #252525;">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand" ><img src="images/Logo/DearMe-Logo-White.png" width="125px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    </li>
+                        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            STAR</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">The Boyz</a></li>
+                            <li><a class="dropdown-item" href="#">BTS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Album</a>
+                            <li><a class="dropdown-item" href="official_merch.html" target="_blank">Official Merch</a></li>
+                            <li><a class="dropdown-item" href="k-style.html" target="_blank">K-Style</a></li>
+                            <li><a class="dropdown-item" href="unoff_merch.html" target="_blank">Unofficial Merch</a></li>
+                        </ul>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HELP</a>
+                    </li>
+
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </nav>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-bell"></i></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#signInRegister">Log In</button>
+                    </li>
+
+                <!--<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Log In</i></a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Sign In</a></li>
+                            <li><a class="dropdown-item" href="#">Register</a></li>
+                        </ul>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-comment-dots"></i></i></a>
+                        </li>-->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--modal-->
+    <div class="modal fade" id="signInRegister" tabindex="-1" aria-labelledby="signInRegisterLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInRegister">Account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+
+                <div class="modal-body">
+                    <form method="POST" action="Log In">
+                        <p>Email</p>
+                            <input type="text" class="input-field form-control" name="email" placeholder="example@gmail.com" required>
+                        <p>Password</p>
+                            <input type="password" class="input-field form-control"  name="password" required>
+                
+                        <input type="submit" name="submit" value="OK">
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <p>Don't have an account yet?</p>
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="text-center">Category : Album</h1>
+
+    <!-- <div class="alert alert-secondary" role="alert"> -->
+        <p class="text-dark fs-2" style="margin-left: 40px;">THE BOYZ</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <a href="detail_product_dreamlike_dayver.html">
+            <div class="card h-100">
+              <img src="https://i.imgur.com/IKQB6l8.jpg" class="card-img-top" alt="Dreamlike-DayVer">
+              <div class="card-body">
+                <h4 class="card-title">THE BOYZ - Dreamlike (DayVer)</h4>
+                <h5 class="card-text">Rp. 312,255.78</h5>
+            </a>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+              <a href="">
+                <p>THE BOYZ 4TH MINI ALBUM</p>
+              </a>
+              <!-- <p>
+              </p><div class="input-group">
+                  <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                          <span class="glyphicon glyphicon-minus"></span>
+                      </button>
+                  </span>
+                  <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                  <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                          <span class="glyphicon glyphicon-plus"></span>
+                      </button>
+                  </span>
+              </div>
+            <p></p> -->
+            <div class="row">
+              <div class="mb-0 w-100">
+                <div class="input-group">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default btn-number"><i data-feather="minus-square" onclick="minus1('productNum1')"></i></button>
+                  </span>
+                  <input type="text" disabled="disabled" class="form-control input-number text-center" id="productNum1" value="1">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default btn-number"><i data-feather="plus-square" onclick="add1('productNum1')"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+              <br>
+                <a href="#" class="btn btn-dark"><i class="fas fa-shopping-bag"></i>Buy Now</a>
+                <a href="#" class="btn btn-dark"><i class="fas fa-cart-plus"></i>Add to cart</a>
+              </div>
+              <div class="card-footer">
+                  <a href="detail_product_dreamlike_dayver.html">Detail Product >></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <a href="detail_product_dreamlike_diy.html">
+            <div class="card h-100">
+              <img src="https://i.imgur.com/kPs4IcA.jpg" class="card-img-top" alt="Dreamlike-DiyVer">
+              <div class="card-body">
+                <h4 class="card-title">THE BOYZ - Dreamlike (DiyVer)</h4>
+                <h5 class="card-text">Rp. 312,255.78</h5>
+            </a>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+              <a href="">
+                <p>THE BOYZ 4TH MINI ALBUM</p>
+              </a>
+              <div class="row">
+                <div class="mb-0 w-100">
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-number"><i data-feather="minus-square" onclick="minus2('productNum2')"></i></button>
+                    </span>
+                    <input type="text" disabled="disabled" class="form-control input-number text-center" id="productNum2" value="1">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-number"><i data-feather="plus-square" onclick="add2('productNum2')"></i></button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+                <br>
+                <a href="#" class="btn btn-dark"><i class="fas fa-shopping-bag"></i>Buy Now</a>
+                <a href="#" class="btn btn-dark"><i class="fas fa-cart-plus"></i>Add to cart</a>
+              </div>
+              <div class="card-footer">
+                  <a href="detail_product_dreamlike_diy.html">Detail Product >></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <a href="detail_product_dreamlike_dreamlike.html">
+            <div class="card h-100">
+              <img src="https://i.imgur.com/XDayVMf.jpg" class="card-img-top" alt="Dreamlike-DreamlikeVer">
+              <div class="card-body">
+                <h4 class="card-title">THE BOYZ - Dreamlike (DreamlikeVer)</h4>
+                <h5 class="card-text">Rp. 312,255.78</h5>
+            </a>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+            <i class="fas fa-star" style="color: goldenrod;"></i>
+              <a href="">
+                <p>THE BOYZ 4TH MINI ALBUM</p>
+              </a>
+              <div class="row">
+                <div class="mb-0 w-100">
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-number"><i data-feather="minus-square" onclick="minus3('productNum3')"></i></button>
+                    </span>
+                    <input type="text" disabled="disabled" class="form-control input-number text-center" id="productNum3" value="1">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default btn-number"><i data-feather="plus-square" onclick="add3('productNum3')"></i></button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+                <br>
+                <a href="#" class="btn btn-dark"><i class="fas fa-shopping-bag"></i>Buy Now</a>
+                <a href="#" class="btn btn-dark"><i class="fas fa-cart-plus"></i>Add to cart</a>
+              </div>
+              <div class="card-footer">
+                  <a href="detail_product_dreamlike_dreamlike.html">Detail Product >></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- <script>
+      function add1(id){
+        console.log('i got clicked')
+        var jumlahstok = document.getElementById(id);
+        if(jumlahstok.value < 10){
+          jumlahstok.value++;
+        }
+      }
+
+      function minus1(id){
+        console.log('i got clicked')
+        var jumlahstok = document.getElementById(id);
+        if(jumlahstok.value > 1){
+          jumlahstok.value--;
+        }
+      }
+
+      function add2(id){
+        console.log('i got clicked')
+        var jumlahstok = document.getElementById(id);
+        if(jumlahstok.value < 10){
+          jumlahstok.value++;
+        }
+      }
+
+      function minus2(id){
+        console.log('i got clicked')
+        var jumlahstok = document.getElementById(id);
+        if(jumlahstok.value > 1){
+          jumlahstok.value--;
+        }
+      }
+
+      function add3(id){
+        console.log('i got clicked')
+        var jumlahstok = document.getElementById(id);
+        if(jumlahstok.value < 10){
+          jumlahstok.value++;
+        }
+      }
+
+      function minus3(id){
+        console.log('i got clicked')
+        var jumlahstok = document.getElementById(id);
+        if(jumlahstok.value > 1){
+          jumlahstok.value--;
+        }
+      }
+
+      feather.replace()
+      
+    </script> -->
+
+<!-- <script>
+  function add2(id){
+    console.log('i got clicked')
+    var jumlahstok = document.getElementById(id);
+    if(jumlahstok.value < 10){
+      jumlahstok.value++;
+    }
+  }
+
+  function minus2(id){
+    console.log('i got clicked')
+    var jumlahstok = document.getElementById(id);
+    if(jumlahstok.value > 1){
+      jumlahstok.value--;
+    }
+  }
+
+  feather.replace()
+  
+</script>
+
+<script>
+  function add3(id){
+    console.log('i got clicked')
+    var jumlahstok = document.getElementById(id);
+    if(jumlahstok.value < 10){
+      jumlahstok.value++;
+    }
+  }
+
+  function minus3(id){
+    console.log('i got clicked')
+    var jumlahstok = document.getElementById(id);
+    if(jumlahstok.value > 1){
+      jumlahstok.value--;
+    }
+  }
+
+  feather.replace()
+  
+</script> -->
+
+    <script src="plusminus.js"></script>
+
+</body>
+
+<footer>
+    <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">Download Our App</th>
+            <th scope="col"><img src="images/Logo/DearMe-Logo-White.png" width="180px"></th>
+            <th scope="col">Follow Us</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td>bla</td>
+              <td><a class="footer-link" href="#">About Us</td>
+            <td><a href="#"><i class="fab fa-facebook-f"></i></a></td>
+          </tr>
+          <tr>
+            <td>bla</td>
+            <td><a class="footer-link" href="#">Terms &amp; Condition</a></td>
+            <td><a href="#"><i class="fab fa-twitter"></i></a></td>
+          </tr>
+          <tr>
+            <td>bla</td>
+            <td><a class="footer-link" href="#">Return Policy</a></td>
+            <td><a href="#"><i class="fab fa-instagram"></i></a></td>
+          </tr>
+          <tr>
+            <td>bla</td>
+            <td><a class="footer-link" href="#">Join Affiliate</a></td>
+            <td><a href="#"><i class="fab fa-youtube"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+</footer>
